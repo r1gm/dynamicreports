@@ -20,19 +20,18 @@
  */
 package net.sf.dynamicreports.report.builder.datatype;
 
+import java.util.Locale;
 import net.sf.dynamicreports.report.base.datatype.AbstractDataType;
 import net.sf.dynamicreports.report.constant.Constants;
 import net.sf.dynamicreports.report.constant.HorizontalTextAlignment;
 import net.sf.dynamicreports.report.defaults.Defaults;
 import net.sf.dynamicreports.report.exception.DRException;
 
-import java.util.Locale;
-
 /**
  * <p>BooleanType class.</p>
  *
  * @author Ricardo Mariaca
- * 
+ *
  */
 public class BooleanType extends AbstractDataType<Boolean, Boolean> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
@@ -52,6 +51,6 @@ public class BooleanType extends AbstractDataType<Boolean, Boolean> {
     /** {@inheritDoc} */
     @Override
     public Boolean stringToValue(String value, Locale locale) throws DRException {
-        return new Boolean(value);
+        return Boolean.valueOf(value);
     }
 }
